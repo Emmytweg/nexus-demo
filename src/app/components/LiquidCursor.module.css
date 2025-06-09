@@ -1,0 +1,56 @@
+.cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease-out;
+}
+
+.follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: #0ff;
+  border-radius: 50%;
+  z-index: 9998;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  filter: url(#goo);
+}
+
+.pulseContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9997;
+}
+
+.pulse {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.pulse.pulse {
+  animation: pulseAnim 0.4s ease-out forwards;
+}
+
+@keyframes pulseAnim {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}

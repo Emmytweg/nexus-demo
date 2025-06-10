@@ -92,7 +92,7 @@ if (sideBarRef.current) {
   return (
     <>
       <div className={styles.hamburgerCircle}>
-        <HiMenu onClick={openSideBar} className='cursor-pointer fixed bottom-0 left-12 top-[85%] h-12 w-12' />
+        <HiMenu onClick={openSideBar} className='cursor-pointer fixed bottom-0 left-12 top-[85%]  sm:h-10 sm:w-10 md:h-12 md:w-12' />
       </div>
 
       <aside
@@ -101,7 +101,7 @@ if (sideBarRef.current) {
         ref={sideBarRef}
       >
         <div className={styles.bg}>
-          <div style={{ width: 80, height: 80, borderRadius: '50%', overflow: 'hidden', marginBottom: 16 }} className='flex items-center justify-center'>
+          <div className='flex items-center justify-center border border-[transparent] rounded-none overflow-none md:h-[70px] md:w-[70px] '>
             <img src='/nexus.png' alt='Nexus Logo' style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
           </div>
 

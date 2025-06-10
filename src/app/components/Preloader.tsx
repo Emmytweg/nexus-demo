@@ -33,18 +33,27 @@ const Preloader = () => {
       duration: 1
     }, "<");
 
-    // Fade out loader after delay
-    tl.to(loaderRef.current, {
-      opacity: 0,
-      pointerEvents: 'none',
-      duration: 1,
-      delay: 2,
-      onComplete: () => {
-        if (loaderRef.current) {
-          (loaderRef.current as HTMLElement).style.display = 'none';
+    // Listen for full window load
+    const handleWindowLoad = () => {
+      const fadeOutTl = gsap.timeline();
+
+      fadeOutTl.to(loaderRef.current, {
+        opacity: 0,
+        pointerEvents: 'none',
+        duration: 1,
+        onComplete: () => {
+          if (loaderRef.current) {
+            (loaderRef.current as HTMLElement).style.display = 'none';
+          }
         }
-      }
-    });
+      });
+    };
+
+    window.addEventListener('load', handleWindowLoad);
+
+    return () => {
+      window.removeEventListener('load', handleWindowLoad);
+    };
   }, []);
 
   return (

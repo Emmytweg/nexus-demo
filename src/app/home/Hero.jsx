@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import styles from './Hero.module.css';
-import DecryptedText from 'C:/Users/TWEG/nexus-demo/src/app/components/DecryptedText.jsx'
+import DecryptedText from './../components/DecryptedText';
 
 const floatingTags = [
   'Healthcare modernization',

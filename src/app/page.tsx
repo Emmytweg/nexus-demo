@@ -1,4 +1,4 @@
-import Hero from 'C:/Users/TWEG/nexus-demo/src/app/home/Hero.jsx'
+import Hero from './home/Hero'
 
 export default function page() {
   return(

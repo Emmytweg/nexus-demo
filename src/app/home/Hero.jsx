@@ -22,7 +22,7 @@ const floatingTags = [
   'Predictive Care',
 ];
 
-const Hero = ({text,speed, className}) => {
+const Hero = () => {
   const containerRef = useRef(null);
   const tagRefs = useRef([]);
 const textRef = useRef()

@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
+import  { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import LiquidCursor from "./components/LiquidCursor.jsx";
 import Nav from './components/Nav';
 import SplashCursor from "./components/SplashCursor.jsx";
-import Preloader from './components/Preloader.tsx'
+import Preloader from './components/Preloader'
 const montserrat = Montserrat({
   // variable: "--font-roboto", // Changed to match Roboto
   subsets: ["latin"],

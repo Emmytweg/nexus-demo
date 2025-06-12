@@ -114,7 +114,7 @@ const Hero = () => {
   return (
     <section
       ref={containerRef}
-      className="md:min-h-[100svh] sm:h-screen sm:p-[20px] absolute w-full top-0 bottom-30 bg-gradient-to-r from-blue-200 via-white to-purple-200 flex items-center justify-center text-center overflow-hidden"
+      className="md:min-h-[100svh] h-[40svh]   w-full  p-8 -mt-10  bg-gradient-to-r from-blue-200 via-white to-purple-200 flex items-center justify-center text-center overflow-hidden"
     >
       {floatingTags.map((tag, index) => (
         <div

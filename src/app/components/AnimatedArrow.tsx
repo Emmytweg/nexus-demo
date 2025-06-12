@@ -1,0 +1,34 @@
+'use client'
+import { motion } from 'framer-motion';
+
+const AnimatedArrow = () => {
+  return (
+    <motion.div whileHover='hover' className="w-fit cursor-pointer group -mt-4">
+      <svg
+        width="50"
+        height="50"
+        viewBox="0 0 56 56"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="0.8"
+          y="0.8"
+          width="54.4"
+          height="54.4"
+          rx="27.2"
+          stroke="#00AEEF"
+          strokeWidth="1.6"
+        />
+        <motion.path
+          d="M22.2244 33.9287C22.3659 34.0667 22.5568 34.1423 22.7544 34.1387C22.9514 34.1391 23.1411 34.064 23.2844 33.9287L32.6144 24.5899V32.6487C32.6144 33.0629 32.9502 33.3987 33.3644 33.3987C33.5658 33.4042 33.7608 33.3273 33.9042 33.1857C34.0477 33.0442 34.1272 32.8502 34.1244 32.6487V22.9165C34.1504 22.8024 34.1498 22.6819 34.1198 22.5644C34.0519 22.2987 33.8444 22.0912 33.5787 22.0233C33.4612 21.9934 33.3407 21.9927 33.2266 22.0187H23.4944C23.0802 22.0187 22.7444 22.3545 22.7444 22.7687C22.7444 23.1829 23.0802 23.5187 23.4944 23.5187H31.5644L22.2244 32.8587C22.0809 32.9997 22 33.1925 22 33.3937C22 33.5949 22.0809 33.7877 22.2244 33.9287Z"
+          fill="#00AEEF"
+          whileTap={{ x: 40, y: 60 }} // 👈 Animate on hover directly here
+          transition={{ type: 'spring', stiffness: 300 }}
+        />
+      </svg>
+    </motion.div>
+  );
+};
+
+export default AnimatedArrow;

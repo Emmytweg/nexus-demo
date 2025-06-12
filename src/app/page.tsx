@@ -1,9 +1,12 @@
-import Hero from './home/Hero'
-
+import Home from './home/page'
+// 
+// 
 export default function page() {
   return(
     <div className='' >
-<Hero />
+ 
+<Home />
+
     </div>
   )
 }

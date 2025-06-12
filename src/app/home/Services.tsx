@@ -3,7 +3,6 @@ import React,{useState} from 'react'
 import SkeletonCard from '../components/SkeletonCard'
 import {motion} from 'framer-motion'
 const Services = () => {
-  const [cards, setCards] = useState([])
 const cardContents =[
   {image: '/img1.png', 
     title:'Healthcare Data solutions', description: 'Data solutions are the backbones of any great data management system, at NexusData Intelligence. we help you streamline your patients data and',  },
